@@ -13,7 +13,7 @@
 
 // Static secret code for testing
 std::vector<int> createSecret() {
-    return {2, 0, 0, 8};  // Fixed secret code for testing
+    return {1, 9, 0, 8};  // Fixed secret code for testing
 }
 
 std::vector<std::string> getHint(std::vector<int> secret, std::vector<int> guess) {
@@ -35,7 +35,7 @@ bool winGame(std::vector<int> secret, std::vector<int> guess) {
 int main() {
     // No need to seed RNG as we're using a static secret code
     std::vector<int> secret_code = createSecret();
-    std::vector<int> user_guess;
+    std::vector<int> user_guess = {-1, -1, -1, -1};
     std::vector<std::string> hint;
 
     int secret_code_length = 4;
