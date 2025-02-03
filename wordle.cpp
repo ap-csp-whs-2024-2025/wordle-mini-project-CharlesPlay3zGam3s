@@ -3,6 +3,8 @@
 * contains the following procedures to work with lists:
 * display, append, insert, remove, length
 */
+//listhelpers.hpp
+// FILE PROVIDED BY TEACHER
 #include "listhelpers.hpp"
 
 #include <cstdlib>   // srand, rand
@@ -31,11 +33,12 @@ std::vector<std::string> getHint(std::vector<int> secret, std::vector<int> guess
 bool winGame(std::vector<int> secret, std::vector<int> guess) {
     return secret == guess;
 }
-
+// Code provided by Teacher Starts here
 int main() {
     // No need to seed RNG as we're using a static secret code
     std::vector<int> secret_code = createSecret();
     std::vector<int> user_guess = {-1, -1, -1, -1};
+    // code provided by teacher ends here
     std::vector<std::string> hint;
 
     int secret_code_length = 4;
